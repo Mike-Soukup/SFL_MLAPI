@@ -1,4 +1,4 @@
-FROM python:3-alpine
+FROM mikesoukup/python-debian-plus:latest
 
 WORKDIR /app
 
