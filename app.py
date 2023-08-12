@@ -7,19 +7,21 @@ from fileinput import filename
 from img_etl_pred import load_model, make_prediction
 
 # Define upload folder path:
-UPLOAD_FOLDER = os.path.join("static",'uploads')
+UPLOAD_FOLDER = os.path.join("static", "uploads")
 RESPONSE_FOLDER = os.path.join("response")
 # Define allowed files:
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {"txt", "pdf", "png", "jpg", "jpeg", "gif"}
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['RESPONSE_FOLDER'] = RESPONSE_FOLDER
+app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
+app.config["RESPONSE_FOLDER"] = RESPONSE_FOLDER
+
 
 @app.route("/")
 def welcome():
     """Fashion MNIST API Landing Page."""
     return render_template("home.html")
+
 
 @app.route("/upload", methods=["GET", "POST"])
 def upload():
@@ -55,4 +57,4 @@ def output():
             rest = rest,
         )
 if __name__ == "__main__":
-    app.run(port = 5000)
+    app.run(host="0.0.0.0", port = 8000)
