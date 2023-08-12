@@ -46,10 +46,7 @@ def output():
         prediction = make_prediction(img1_path)
 
         # Create JSON-like output to simulate REST API:
-        rest = {'predicted_class':prediction}
-
-        # # File Cleanup:
-        # os.remove(os.path.join(app.config['UPLOAD_FOLDER'], img1_path))
+        rest = {'predicted_digit':prediction}
 
         return render_template(
             "output.html",
