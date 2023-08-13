@@ -1,4 +1,4 @@
-FROM mikesoukup/python-debian-plus:latest
+FROM python:3.8-slim-bookworm
 
 WORKDIR /app
 
