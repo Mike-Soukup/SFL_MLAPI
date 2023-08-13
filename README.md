@@ -24,13 +24,12 @@ Assuming the user has an Azure Cloud Subscrition, the following steps can be tak
     - Select the Runtime your code will run with; I used `Python 3.8` for this repo
     - Select the region of deployment such as `us-east`
     - Select the App Service plan; for best development results, I recommend using `B1`
-4. There are various was to deploy the app, I recommend using the Azure Portal to set up the deployment instructions and then using your terminal to push your source code similar to how you would with a git repo
-    - Select your resource and go to `Deployment Center`
-    - Select `Local Git` and press save, the screen will update accordingly. Most notably and `Git Clone Uri` will be provided for you to push your source code to
-5. Set the `Git Clone Uri` as a remote target to push your source code:
-    - Enter `git remote add azure <git-clone-uri>`
-    - Then enter `git push azure main:master`
-        - You will be prompted to enter the username and password which can be found in the `Local Git/FTPS` section of the resources `Deployment Center`
+
+**Note:** There are various ways to deploy the app, however, one major benefit of developing in Azure is the seamless interaction the Azure Cloud has with GitHub. Therefore, I strongly recommend deploying from GitHub as this will automatically integrate a `CI/CD` build system via GitHubActions upon deployment. 
+
+4. Go to the Deployment center and select `GitHub` as the source for deployment. 
+    - Be sure to point to the GitHub repository and branch you would like to put into production. <br>
+    **Note:** It is best practice to manage your deployment slots to ensure you atleast have a development slot and a production slot. For this MVP (Minumum Viable Product) we will forgo that step for now, but this is a recommended best practice for commercial products. 
 
 For additional resources refer to the following Azure Documentation: https://learn.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-portal%2Clocal-git-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli 
 
