@@ -51,3 +51,9 @@ Developers or other users can also run the Flask App locally. To run the MNIST A
 2. Start the virtual environment by running `source .mlapi_venv/bin/activate`
 3. Execute the `make install` command in the terminal
 4. Execute the `make run_flask` command in the terminal
+
+### Additional Comments about the contents in this Repo:
+
+An MLP/Neural Net was also trained for the Fashion MNIST dataset. This model is stored in the `model` directory of this repository under the title `fashion_mnist.h5`. Incorporating this model into the API is near simple drop in replacement. Simply point the `make_prediction` function to the Fashion MNIST model and ensure the dependencies are updated within the `requirements.txt` file. For instance, `tensorflow` will be a required dependency to execute predictions with the Fashion MNIST Model.
+
+Initial EDA, model development, and analysis are located in Jupyter Notebooks for both the MNIST and Fashion MNIST models. 
