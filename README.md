@@ -14,7 +14,7 @@ Once the user has arrived at this webpage, they can select the `MNIST API` card 
 The user is then able to upload an MNIST image and a digit prediction will be retrieved. Additionally, the JSON prediction will be returned showing the user what the RESTful payload will look like.
 
 ### Deploying this repo into Azure:
-Assuming the user has an Azure Cloud Subscrition, the following steps can be taken in order to deploy this MNIST API into a Web App. 
+Assuming the user has an Azure Cloud Subscription, the following steps can be taken in order to deploy this MNIST API into a Web App. 
 
 1. Find the App Services Resource within the Azure Portal:
     - Can either search for `App Services` in the search bar OR:
@@ -56,6 +56,6 @@ Developers or other users can also run the Flask App locally. To run the MNIST A
 
 ### Additional Comments about the contents in this Repo:
 
-An MLP/Neural Net was also trained for the Fashion MNIST dataset. This model is stored in the `model` directory of this repository under the title `fashion_mnist.h5`. Incorporating this model into the API is near simple drop in replacement. Simply point the `make_prediction` function to the Fashion MNIST model and ensure the dependencies are updated within the `requirements.txt` file. For instance, `tensorflow` will be a required dependency to execute predictions with the Fashion MNIST Model.
+An MLP/Neural Net was also trained for the Fashion MNIST dataset. This model is stored in the `model` directory of this repository under the title `fashion_mnist.h5`. Incorporating this model into the API is near simple drop in replacement. Simply point the `make_prediction` function to the Fashion MNIST model and ensure the dependencies are updated within the `requirements.txt` file. For instance, `tensorflow` will be a required dependency to execute predictions with the Fashion MNIST Model. Other minor image processing steps may be required in the `make_predictions` function. But the current solution offers a great template for providing an API for either ML model.
 
 Initial EDA, model development, and analysis are located in Jupyter Notebooks for both the MNIST and Fashion MNIST models. 
