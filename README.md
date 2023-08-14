@@ -1,6 +1,6 @@
 # Overview page for MNIST ML API:
 
-This repo represents the source code for deploying a Flask API end point for a Support Vector Machine (SVM) that will predict which digit is displayed with a 28 x 28 pixel image from the famouse MNIST data set. 
+This repo represents the source code for deploying a Flask API end point for a Support Vector Machine (SVM) that will predict which digit is displayed with a 28 x 28 pixel image from the famous MNIST data set. 
 
 There are three ways for users to interact with this API:
 
