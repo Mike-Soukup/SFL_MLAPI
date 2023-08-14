@@ -10,12 +10,12 @@ import numpy as np
 from PIL import Image
 
 def load_model(model_path: str):
-    """Driver function to load in our model"""
+    """Helper function to load in our model"""
     model = pickle.load(open(model_path, 'rb'))
     return model
 
 def make_prediction(img_path):
-    '''Driver funtion to make prediction on input Fashion MNIST image'''
+    '''Driver funtion to make prediction on input MNIST image'''
     ### Load MNIST Model
     model_path = r'./model/mnist_svm.pickle'
     model = load_model(model_path)
