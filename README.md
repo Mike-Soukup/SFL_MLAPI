@@ -4,7 +4,7 @@ This repo represents the source code for deploying a Flask API end point for a S
 
 There are three ways for users to interact with this API:
 
-## 1 Azure Web App:
+## (1) Azure Web App:
 The API is currently hosted on Azure and can be accessed publically by visiting: https://mnist-mlapi.azurewebsites.net/
 
 Once the user has arrived at this webpage, they can select the `MNIST API` card which will direct them to the API landing page. 
@@ -33,7 +33,7 @@ Assuming the user has an Azure Cloud Subscrition, the following steps can be tak
 
 For additional resources refer to the following Azure Documentation: https://learn.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-portal%2Clocal-git-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli 
 
-## 2 Docker:
+## (2) Docker:
 In addition to locating the API via public internet access, the user can also run the Flask App locally via a Docker Container. In order to do this, the following steps must be taken:
 
 1. First, the `SFL_MLAPI` repository must be cloned from GitHub at: https://github.com/Mike-Soukup/SFL_MLAPI
@@ -44,7 +44,7 @@ In addition to locating the API via public internet access, the user can also ru
     For example, `docker run -d -p 8000:8000 mnist_api`
 5. Once the Docker container is running, the user can open a webpage to `localhost:8000` and interact with the MNIST API.
 
-## 3 Locally:
+## (3) Locally:
 Developers or other users can also run the Flask App locally. To run the MNIST API locally, the following steps should be followed:
 
 1. First, the `SFL_MLAPI` repository must be cloned from GitHub at: https://github.com/Mike-Soukup/SFL_MLAPI
