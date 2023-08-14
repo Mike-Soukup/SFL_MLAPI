@@ -7,6 +7,8 @@ There are three ways for users to interact with this API:
 ## (1) Azure Web App:
 The API is currently hosted on Azure and can be accessed publically by visiting: https://mnist-mlapi.azurewebsites.net/
 
+**Note:** For this MVP, the API will assume that a 28x28 image is used as in input. Other edge cases and image pre-processes was not implemented at this time. Therefore, while testing the API, it is best to use actual 28x28 sample images from the MNIST data set. 
+
 Once the user has arrived at this webpage, they can select the `MNIST API` card which will direct them to the API landing page. 
 
 The user is then able to upload an MNIST image and a digit prediction will be retrieved. Additionally, the JSON prediction will be returned showing the user what the RESTful payload will look like.
